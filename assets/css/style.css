@@ -13,7 +13,23 @@ body {
     flex-direction: column;
     font-family: montserrat, sans-serif;
     text-align: center;
-    background-color: 0e202b;
+    background-color: #d3d3d3;
     padding: 5px;
 
+} 
+
+/* Headings */
+ 
+h1{
+    text-shadow : 0px 5px 20px #e0115f;
+    color: white;
+    font-size: 2.5rem;
+    padding-top: 20px;
+}
+
+h2{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
