@@ -9,7 +9,7 @@ const timeDisplay = document.getElementById("timer");
 const nextButton = document.getElementById("next-button");
 
 // variables to be defined 
- let shuffledQuestion;
+ let shuffledQuestions;
  let currentQuestionIndex;
  let correctAnswers;
  let score;
@@ -69,7 +69,23 @@ const nextButton = document.getElementById("next-button");
 
   function startQuiz() {
     quizArea.classList.remove("hide");
-    shuffledQuestion = Questions.sort(() => 0.5 - Math.random()).slice(0, 10);
+    shuffledQuestions = Questions.sort(() => 0.5 - Math.random()).slice(0, 10);
     currentQuestionIndex = 0;
     nextQuestion();
+  }
+
+  /**
+   * function to reset and display the quiz content
+   */
+
+  function nextQuestion() {
+    clearInterval(timerInterval); // stop timer from continuing
+    if (currentQuestionIndex < 10) {
+        resetQuizContent();
+        displayQuizContent(shuffledQuestions[currentQuestionIndex]);
+        currentQuestionIndex++;
+        timer();
+    } else {
+        finalResult();
+    }
   }
