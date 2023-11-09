@@ -22,7 +22,7 @@ body {
  
 h1{
     text-shadow : 0px 5px 20px #e0115f;
-    color: white;
+    color: #0e202b;
     font-size: 2.5rem;
     padding-top: 20px;
 }
@@ -33,3 +33,32 @@ h2{
     font-size: 1.2rem;
     font-weight: 300;
 }
+
+/* quiz timer */
+ #timer {
+    margin-left: 20px;
+ }
+
+ /* paragraphs */
+ p{
+    font-size: 1.2rem;
+    padding: 10px;
+ }
+
+ /* buttons */
+ .btn {
+    color: #e0115f;
+    text-shadow: 0px 5px 20px #ffffff;
+    font-weight: 600;
+    background-color: #0e202b;
+    display: block;
+    padding: 10px;
+    width: 80%;
+    min-width: 180px;
+    margin: 20px auto;
+    font-family: montserrat, sans-serif;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 5px #0e202b;
+ }
