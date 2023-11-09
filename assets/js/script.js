@@ -51,4 +51,16 @@ const nextButton = document.getElementById("next-button");
     menu.classList.remove("hide");
  }
 
+ /**
+  * hide the quiz area,reset the quiz and display menu
+  */
+ 
+ function closeQuiz() {
+    currentQuestionIndex = 0;
+    clearInterval(timerInterval);
+    resetScore();
+    quizArea.classList.add("hide");
+    heading.classList.remove("hide");
+    menu.classList.remove("hide");
+ }
  
