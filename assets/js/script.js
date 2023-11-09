@@ -171,5 +171,16 @@ nextButton.addEventListener("click", nextQuestion);
 function incermentScore() {
     score = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++score;
-    
+
+}
+
+/* reset quiz content */
+function resetQuizContent() {
+    nextButton.classList.add("hide");
+    answersArea.classList.remove("no-pointer");
+    timeLeft = 16;
+    startTimer();
+    while (answersArea.firstChild) {
+        answersArea.removeChild(answersArea.firstChild);
+    }
 }
