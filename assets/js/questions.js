@@ -71,7 +71,7 @@ answer: [
      } ,    
 
 {
-question: "Which player has most centuries?"
+question: "Which player has most centuries?",
 answer: [
     { text: "Ricky Ponting", correct: false },
     { text: "Kumar Sangakkara", correct: false },
@@ -127,7 +127,7 @@ answer: [
  },
 
  {
-question: "Which country is hosting 2023 World cup?"
+question: "Which country is hosting 2023 World cup?",
 answer: [
     { text: "India", correct: true },
     { text: "England", correct: false},

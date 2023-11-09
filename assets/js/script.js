@@ -89,3 +89,25 @@ const nextButton = document.getElementById("next-button");
         finalResult();
     }
   }
+  /* quiz content */
+  function displayQuizContent(question) {
+
+    const questionContainer = document.getElementById("question");
+
+    questionContainer.InnerText = question.question;
+    // create a button
+    question.answer.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn');
+        if (answer-correct) {
+            button.id = "correct";
+        } else { 
+            button.classList-add("incorrect");
+        } 
+        // Add event listnere
+        button.addEventListener("click", checkAnswer);
+        answerArea.appendChild(button);
+    });
+    displayQuestionNumber();
+}
