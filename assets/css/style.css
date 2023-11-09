@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     font-family: montserrat, sans-serif;
     text-align: center;
-    background-color: #d3d3d3;
+    background-color: lightgrey;
     padding: 5px;
 
 } 
@@ -22,7 +22,7 @@ body {
  
 h1{
     text-shadow : 0px 5px 20px #e0115f;
-    color: #0e202b;
+    color: #5f4b66;
     font-size: 2.5rem;
     padding-top: 20px;
 }
@@ -76,3 +76,32 @@ h2{
     border-radius: 20px;
     font-family: montserrat, sans-serif;
  }
+
+ /* questions and answer area in quiz */
+ #question-area {
+    margin-top: 30px;
+ }
+#answer-area > .btn {
+    color: #0e202b;
+    background-color: gray ;
+}
+/* container divs */
+.container {
+    position: relative;
+    background: #5f4b66;
+    max-width: 650px;
+    margin: 40px 5px;
+    padding: 20px;
+    border: 2px solid #0e202b;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 15px #0e202b;
+}
+/* rules section */
+#rules-heading {
+    font-size: 2rem;
+}
+li {
+    text-align: left;
+    margin: 0 20px;
+    padding: 10px;
+}
