@@ -134,3 +134,44 @@ color: #0e202b;
 footer > p {
     font-size: 1rem;
 }
+/* media quieries */
+/* for screens larger than 670px*/
+@media screen and (min-width: 670px) {
+    h1 {
+        margin-top: 80px;
+        font-size: 4rem;
+    }
+
+    h2 {
+font-size: 1.4rem;
+    }
+
+.container {
+    min-width: 650px;
+    margin: 40px auto;
+}
+
+#timer {
+    margin-left: 80px;
+}
+/* hover button */
+.btn:hover {
+    border-color: #ffffff;
+    color: #e0115f;
+    box-shadow: 0px 0px 15px 15px #ffffff;
+}
+
+.close-section:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #e0115f;
+    box-shadow: 0px 0px 15px 15px #ffffff;
+}
+#answer-area > .btn:hover {
+    background-color: #ffffff;
+    color: #e0115f;
+    box-shadow: 0px 0px 15px 15px #ffffff;
+ }
+
+
+}
