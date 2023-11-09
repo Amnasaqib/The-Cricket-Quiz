@@ -111,3 +111,12 @@ const nextButton = document.getElementById("next-button");
     });
     displayQuestionNumber();
 }
+
+/**
+ * change the question number 
+ */
+function displayQuestionNumber() {
+    const QuestionNumber = document.getElementById("question-number");
+    QuestionNumber.innerText = currentQuestionIndex + 1;
+
+}
