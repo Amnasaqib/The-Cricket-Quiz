@@ -16,4 +16,18 @@ const nextButton = document.getElementById("next-button");
  let timeLeft;
  let timerInterval;
 
+ /* Waits for DOM to be loaded */
+ document.addEventListener("DOMContentLoaded", function()
+ {
+    const menuButtons = this.querySelectorAll(".menu-btn");
+    menuButtons.forEach((menuButton) => {
+        menuButton.addEventListener("click", function() {
+            if (this.getAttribute("id") ===  "rules-button") {
+                displayRules();
+            } else if (this.getAttribute("id") === "quiz-button"){
+                Questions();
+            }
+        });
+    });
+ });
  
