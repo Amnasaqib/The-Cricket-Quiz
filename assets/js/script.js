@@ -4,7 +4,7 @@ const heading = document.getElementById("heading");
 const menu = document.getElementById("menu");
 const rulesSection = document.getElementById("rules");
 const quizArea = document.getElementById("quiz-area");
-const answerArea = document.getElementById("answer-area");
+const answersArea = document.getElementById("answer-area");
 const timeDisplay = document.getElementById("timer");
 const nextButton = document.getElementById("next-button");
 
@@ -135,4 +135,29 @@ function timer(){
         timeLeft--;
     }
     timeDisplay.innerHTML = 'Time: ' + timeLeft;
+}
+
+/**
+ * Alert for time up 
+ */
+function timeUp() {
+    alert("Oops! You ran out of time!");
+    clearInterval(timerInterval); 
+    answersArea.classList.add("no-pointer");
+
+    /**
+     * incorrect answer
+     */
+    const wrongAnswers = document.querySelectorAll('.incorrect');
+    for (let wrongAnswer of wrongAnswers ) {
+        wrongAnswer.classList.add('wrong-answer');
+    }
+
+    /**
+     * correct answers
+     */
+
+    correctAnswer = document.getElementById("correct");
+    correctAnswer.classList.add("correct-answet");
+    nextButton.classList.remove("hide");
 }
