@@ -62,3 +62,17 @@ h2{
     border-radius: 20px;
     box-shadow: 0px 0px 15px 5px #0e202b;
  }
+  
+ /* buttons to close section */
+ .close-section {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0 10px;
+    background-color: inherit;
+    font-size: 2rem;
+    color: #0e202b;
+    border: none;
+    border-radius: 20px;
+    font-family: montserrat, sans-serif;
+ }
