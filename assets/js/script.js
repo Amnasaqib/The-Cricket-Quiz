@@ -30,7 +30,9 @@ const nextButton = document.getElementById("next-button");
         });
     });
  });
- /* hides main menu while the rules section is displayed */
+ /**
+  * hides main menu while the rules section is displayed.
+  */
 
  function displayRules() {
     rulesSection.classList.remove("hide");
@@ -38,6 +40,15 @@ const nextButton = document.getElementById("next-button");
     menu.classList.add("hide");
     const closeRulesButton = document.getElementById("close-rules");
     closeRulesButton.addEventListener("click", closeRules);
+ }
+
+ /**
+  *   Hide rules section and display back main menu. 
+   */
+ function closeRules() {
+    rulesSection.classList.add("hide");
+    heading.classList.remove("hide");
+    menu.classList.remove("hide");
  }
 
  
