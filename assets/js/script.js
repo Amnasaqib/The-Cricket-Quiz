@@ -63,4 +63,13 @@ const nextButton = document.getElementById("next-button");
     heading.classList.remove("hide");
     menu.classList.remove("hide");
  }
- 
+  /**
+   * Displays quiz area and get 10 random questions.
+   */
+
+  function startQuiz() {
+    quizArea.classList.remove("hide");
+    shuffledQuestion = Questions.sort(() => 0.5 - Math.random()).slice(0, 10);
+    currentQuestionIndex = 0;
+    nextQuestion();
+  }
