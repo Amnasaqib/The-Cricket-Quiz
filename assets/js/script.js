@@ -191,5 +191,22 @@ function finalResult() {
     quizArea.classList.add("hide");
     heading.classList.remove("hide");
     quizComplete.classList.remove("hide");
-    finalScore.InnerText = score: 
+    finalScore.InnerText = score;
 }
+
+/* quiz-complete-btn */
+const endOfQuizButtons = document.querySelectorAll(".quiz-complete-btn");
+endOfQuizButton.forEach((endOfQuizButton) => {
+    endOfQuizButton.addEventListener("click", function() {
+        resetScore();
+        quizComplete.classList.add("hide");
+        if (this.getAttribute("id") === "retry-button");
+    }
+    )}
+);
+function resetScore() {
+    score = document.getElementById("score");
+    score.innerText = 0;
+}
+
+
