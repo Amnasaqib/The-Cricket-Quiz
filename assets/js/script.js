@@ -161,3 +161,15 @@ function timeUp() {
     correctAnswer.classList.add("correct-answet");
     nextButton.classList.remove("hide");
 }
+
+/* listens for a next button */
+nextButton.addEventListener("click", nextQuestion);
+
+
+/* get the current score and incerment by 1 */
+
+function incermentScore() {
+    score = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++score;
+    
+}
