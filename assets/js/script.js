@@ -184,3 +184,12 @@ function resetQuizContent() {
         answersArea.removeChild(answersArea.firstChild);
     }
 }
+/*final function*/
+function finalResult() {
+    const quizComplete = document.getElementById("quiz-complete");
+    const finalScore = document.getElementById("final-score");
+    quizArea.classList.add("hide");
+    heading.classList.remove("hide");
+    quizComplete.classList.remove("hide");
+    finalScore.InnerText = score: 
+}
