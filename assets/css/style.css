@@ -121,3 +121,16 @@ li {
     background-color: red !important;
     box-shadow: 0px 0px 15px 15px #0e202b;
 }
+
+.no-pointer{
+    pointer-events: none;
+}
+/* footer */
+
+footer{
+margin-top: auto;
+color: #0e202b;
+}
+footer > p {
+    font-size: 1rem;
+}
