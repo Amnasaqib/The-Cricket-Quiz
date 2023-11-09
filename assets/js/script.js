@@ -120,3 +120,19 @@ function displayQuestionNumber() {
     QuestionNumber.innerText = currentQuestionIndex + 1;
 
 }
+/** 
+ * set time interval
+ */
+function startTimer() {
+    timerInterval = setInterval(timer, 1000);
+
+}
+
+function timer(){
+    if (timeLeft <= 0){
+        timeUp();
+    } else {
+        timeLeft--;
+    }
+    timeDisplay.innerHTML = 'Time: ' + timeLeft;
+}
