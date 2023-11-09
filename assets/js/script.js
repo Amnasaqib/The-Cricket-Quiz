@@ -30,4 +30,14 @@ const nextButton = document.getElementById("next-button");
         });
     });
  });
+ /* hides main menu while the rules section is displayed */
+
+ function displayRules() {
+    rulesSection.classList.remove("hide");
+    heading.classList.add("hide");
+    menu.classList.add("hide");
+    const closeRulesButton = document.getElementById("close-rules");
+    closeRulesButton.addEventListener("click", closeRules);
+ }
+
  
