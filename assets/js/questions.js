@@ -245,40 +245,36 @@ answers: [
     { text: "1996", correct: false },
     { text: "2023", correct: false }
 ]
-};
+},
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{
+question: "Who is the legendary bowler of West Indies?",
+answers: [
+    { text: "Glenn McGrath", correct: false },
+    { text: "Shane Warne", correct: false },
+    { text: "MD Marshall", correct: true },
+    { text: "Dale Steyn", correct: false }
 ]
+},
+
+ {
+question: "Who caught 7 catches in one innings?",
+answers : [
+    { text: "Shadab Khan", correct: false },
+    { text: "Ian Smith", correct: true },
+    { text: "Virat Kohli", correct: false },
+    { text: "Ricky Ponting", correct: false }
+]
+ },
+
+ {
+    question: "How many T20i matches did Ahsan Raza umpired?",
+    answers: [
+        { text: "12", correct: false },
+        { text: "68", correct: false },
+        { text: "22", correct: false },
+        { text: "97", correct: true }
+    ]
+ }
+
+];
