@@ -8,8 +8,6 @@
     <meta name="description" content="A site for people to test their knowledge of cricket by a quiz test.">
     <meta name="keywords" content="quiz, cricket quiz, test, cricket, history">
     <link rel="stylesheet" href="assets/css/style.css">
-
-   <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
     <!--Title -->
     <title>The Cricket Quiz</title>
 </head>
@@ -26,27 +24,39 @@
     <button id="quiz-button" class="btn menu-btn">Take the quiz</button>
 </div>
 
-<!-- the rules section -->
+<!-- the rules modal -->
 <div id="rules" class="container hide">
     <h2 id="rules-heading">Rules</h2>
-   <button id="close-rules" class="close-section"></button>
+   <button id="close-rules" class="close-modal">x</button>
  <ul>
     <li>Each quiz is made up of 10 questions.</li>
+    <li>You can choose difficulty of quiz .</li>
     <li>You will have 15 seconds to answer each question.</li>
     <li>If unanswered, you will automatically fail the question.</li>
     <li>To select on answer, click or tap on the option you think is correct.</li>
     <li>Do not use any source to help you.</li>
  </ul>
 </div>
+<!-- quiz prompt with difficulty menu -->
+<div id="quiz-difficulty-prompt" class="container hide">
+    <button id="close-difficulty" class="close-modal">x</button>
+    <h2>Select a dificulty to begin.</h2>
+    <div>
+        <button id="easy" class="btn difficulty-option">EASY</button>
+    <button id="hard" class="btn difficulty-option">HARD</button>
+    </div>
+</div>
 
 <!-- quiz area -->
 <div id="quiz-area" class="container hide">
-    <button id="close-quiz" class="close-section">Quit</button> 
+<button id="close-quiz" class="close-modal">Quit</button> 
+
 <!-- question area with timer --> 
 <div id="question-area">
     <h2>Question <span id="question-number">0</span>/10 <span id="timer">0</span></h2>
     <p id="question">Question content goes here.</p>
 </div>
+
 <!-- answers option container and score display -->
 <div id="answer-area">
 </div>

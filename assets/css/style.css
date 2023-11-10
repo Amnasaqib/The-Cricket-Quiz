@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     height: 100vh;
     display: flex;
@@ -64,7 +65,7 @@ h2{
  }
   
  /* buttons to close section */
- .close-section {
+ .close-modal {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -96,7 +97,7 @@ h2{
     border-radius: 20px;
     box-shadow: 0px 0px 15px 15px #0e202b;
 }
-/* rules section */
+/* rules modal */
 #rules-heading {
     font-size: 2rem;
 }
@@ -161,7 +162,7 @@ font-size: 1.4rem;
     box-shadow: 0px 0px 15px 5px #ffffff;
 }
 
-.close-section:hover {
+.close-modal:hover {
     background-color: #ffffff;
     border-color: #ffffff;
     color: #e0115f;
@@ -172,6 +173,5 @@ font-size: 1.4rem;
     color: #e0115f;
     box-shadow: 0px 0px 15px 5px #ffffff;
  }
-
 
 }
