@@ -1,6 +1,6 @@
 // object containing questions.
 
-const Questions = [
+const easyQuestions = [
     {
 question: "Who is the top scorer of all time?",
 answers: [
@@ -13,7 +13,7 @@ answers: [
 
 {
 question: "Who is top wicket taker of all time?",
-answer: [
+answers : [
 { text: "Muthiah Muralidaran", correct: true },
 { text: "Wasim Akram", correct: false },
 { text: "James Anderson", correct: false },
@@ -23,7 +23,7 @@ answer: [
     
 {
 question: "How many players are there in a cricket team?",
-answer: [
+answers : [
 { text: "12", correct: false },
 { text: "9",  correct: false},
 { text: "10", correct: false },
@@ -32,7 +32,7 @@ answer: [
   },
  {
  question: "What is the biggest cricket tournament?",
- answer: [
+ answers : [
 { text: "Ashes", correct: false },
 { text: "World Cup", correct: true },
 { text: "Champions Trophy", correct: false },
@@ -42,7 +42,7 @@ answer: [
 
     { 
     question: "Which Pakistani player has scored 200?",
-    answer: [
+    answers : [
         { text: "Babar Azam", correct: false },
         { text: "Saeed Anwar", correct: false },
         { text: "Fakhar Zaman", correct: true },
@@ -52,7 +52,7 @@ answer: [
 
  {
 question: "Which player has hit more sixes?",
-answer: [
+answers : [
     { text: "Virat Kohli", correct: false },
     { text: "Rohit Sharma", correct: true },
     { text: "Ben Stokes", correct: false },
@@ -62,7 +62,7 @@ answer: [
 
      {
 question: "Which team has won the most World cups?",
-answer: [
+answers : [
     { text: "Australia", correct: true },
     { text: "India", correct: false },
     { text: "England", correct : false },
@@ -72,7 +72,7 @@ answer: [
 
 {
 question: "Which player has most centuries?",
-answer: [
+answers : [
     { text: "Ricky Ponting", correct: false },
     { text: "Kumar Sangakkara", correct: false },
     { text: "Sachin Tendulkar", correct: true },
@@ -81,7 +81,7 @@ answer: [
 },
  {
 question: "What is the highest team score in ODI?",
-answer: [
+answers : [
 { text: "450-0", correct: false },
 { text: "498-4", correct: true },
 { text: "450-4", correct : false },
@@ -90,7 +90,7 @@ answer: [
  },
  {
 question: "What is the highest team score in T20i?",
-answer: [
+answers : [
     { text: "278-3", correct: false },
     { text: "278-4", correct: false },
     { text: "273-2", correct: false },
@@ -100,7 +100,7 @@ answer: [
  
 {
  question: "Which batsman has best strike rate in ODI cricket?",
- answer: [
+ answers : [
     { text: "Andrew Russell", correct: true },
     { text: "Glenn Maxwell", correct: false },
     { text: "Jos Buttler", correct: false },
@@ -109,7 +109,7 @@ answer: [
 }, 
 { 
     question: "How many days does a Test match go for?",
-    answer: [
+    answers : [
         { text: "3", correct: false },
         { text: "4", correct: false },
         { text: "1", correct: false },
@@ -117,8 +117,8 @@ answer: [
     ]
 },
  {
-    question:"When was first T20 match played?",
-    answer: [
+    question: "When was first T20 match played?",
+    answers : [
         { text: "2007", correct: false },
         { text: "2000", correct: false },
         { text: "2003", correct: true },
@@ -128,7 +128,7 @@ answer: [
 
  {
 question: "Which country is hosting 2023 World cup?",
-answer: [
+answers : [
     { text: "India", correct: true },
     { text: "England", correct: false},
     { text: "New Zealand", correct: false},
@@ -137,7 +137,7 @@ answer: [
  },
   {
 question: "What is the biggest Cricket rivalry?",
-answer: [
+answers : [
     { text: "England Vs Austrailia", correct: false },
     { text: "India Vs Pakistan", correct: true },
     { text: "Bangladesh Vs Sri-Lanka", correct: false },
@@ -146,3 +146,139 @@ answer: [
   },
 ];
 
+const hardQuestions = [
+{
+question: "The Big Bash League is based in which country?",
+answers : [
+     { text: "Pakistan", correct: false },
+     { text: "England", correct: false },
+     { text: "Australia", correct: true },
+     { text: "India", correct: false }
+]
+},
+ 
+{
+question: "When Did Ben Stokes made his Test Debut?",
+answers : [
+    { text: "2010", correct: false },
+    { text: "2013", correct: true },
+    { text: "2015", correct: false },
+    { text: "2011", correct: false }
+]
+},
+
+{
+question: "Who has the most career runs in England Test match cricket?",
+answers : [
+    { text: "Alester Cook", correct: true},
+    { text: "Moin Ali", correct: false },
+    { text: "Ben Stokes", correct: false },
+    { text: "David Warner", correct: false}
+]
+},
+
+{
+question: "When did Nasser Hussain last captained England Test Team?",
+answers : [
+    { text : "1999", correct: false },
+    { text: "2000", correct: false },
+    { text: "2002", correct: false },
+    { text: "2003", correct: true }
+]
+},
+
+{
+question: "How many bails sit on top of cricket stumps?",
+answers : [
+{ text: "3", correct: false },
+{ text: "2", correct: true },
+{ text: "1", correct: false },
+{ text: "0", correct: false }
+]
+},
+
+{
+question: "In what year was 100-ball cricket first played?",
+answers: [
+    { text: "2000", correct: false },
+    { text: "2018", correct: false },
+    { text: "2010", correct: false },
+    { text: "2021", correct: true }
+]
+}, 
+
+{
+question: "In what city is Edgbaston Stadium?",
+answers: [
+    { text: "Birmingham", correct: true },
+    { text: "London", correct: false },
+    { text: "Dublin", correct: false },
+    { text: "Sydney", correct: false }
+]
+},
+
+{
+question: "In which cricket stadium would you find The Tavern Stand?",
+answers:  [
+    { text: "Oval", correct: false },
+    { text: "Lord's", correct: true },
+    { text: "Eden Gardens", correct: false },
+    { text: "MCG", correct: false }
+]
+},
+
+{
+question: "Which captain won World Cup for Pakistan",
+answers: [
+    { text: "Shahid Afridi", correct: false },
+    { text: "Babar Azam", correct: false },
+    { text: "Wasim Akram", correct: false },
+    { text: "Imran Khan", correct: true }
+]
+},
+
+{
+question: "When did Pakistan won the World Cup?",
+answers: [
+    { text: "1992", correct: true },
+    {text: "2019", correct: false },
+    { text: "1996", correct: false },
+    { text: "2023", correct: false }
+]
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
