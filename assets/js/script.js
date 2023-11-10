@@ -25,7 +25,9 @@ menuButtons.forEach((menuButton) => {
 menuButton.addEventListener("click", function () {
 if (this.getAttribute("id") === "rules-button") {
 displayRules();
- };
+ } else if (this.getAttribute("id") === "quiz-button"){
+    quizDifficultyPrompt();
+ }
  });
  });
 });
@@ -35,7 +37,7 @@ displayRules();
   */
 
 function displayRules() {
-rulesSection.classList.remove("hide");
+rulesModal.classList.remove("hide");
 heading.classList.add("hide");
 menu.classList.add("hide");
 const closeRulesButton = document.getElementById("close-rules");
@@ -46,7 +48,39 @@ closeRulesButton.addEventListener("click", closeRules);
   *   Hide rules section and display back main menu. 
    */
 function closeRules() {
-rulessection.classList.add("hide");
+rulesModalclassList.add("hide");
+heading.classList.remove("hide");
+menu.classList.remove("hide");
+}
+
+/** 
+ * Difficulty menu
+ */
+function quizDifficultyPrompt() {
+    const closeDifficultyButton = document.getElementById("close-difficulty");
+    closeDifficultyButton.addEventListener("click", closeDifficultyMenu);
+
+    difficultyPrompt.classListremove("hide");
+    heading.classList.add("hide");
+    menu.classList.add("hide");
+
+    /** options */
+    const difficultyOptions = document.querySelectorAll(".difficulty-option");
+    difficultyOptions.forEach((difficultyOption) => {
+        difficultyOption.addEventListener("click", function() {
+            difficultyPrompt.classList.add("hide");
+            if (this.getAttribute("id") === "easy"){
+                startEasyQuiz();
+            } else if (this.getAttribute("id") === "hard"){
+                startHardQuiz();
+            }
+            const quitButton = document.getElementById("close-quiz");
+            quitButton.addEventListener("click", closequiz);
+        });
+    });
+}
+function closeDifficultyMenu() {
+difficultyPrompt.classList("hide");
 heading.classList.remove("hide");
 menu.classList.remove("hide");
 }
@@ -65,15 +99,28 @@ menu.classList.remove("hide");
 }
 
 /**
-   * Displays quiz area and get 10 random questions.
+   * Displays Easy quiz area and get 10 random questions.
    */
 
-function startQuiz() {
+function startEasyQuiz() {
  quizArea.classList.remove("hide");
-shuffledQuestions = Questions.sort(() => 0.5 - Math.random()).slice(0, 10);
+shuffledQuestions = easyQuestions.sort(() => 0.5 - Math.random()).slice(0, 10);
 currentQuestionIndex = 0;
 nextQuestion();
 }
+
+/**
+   * Displays hard quiz area and get 10 random questions.
+   */
+
+function startHardQuiz() {
+    quizArea.classList.remove("hide");
+    shuffledQuestions = hardQuestions.sort(() => 0.5 - Math.random()).slice(0, 10);
+    currentQuestionIndex = 0;
+    nextQuestion();
+}
+
+
 
 /**
  * function to reset and display the quiz content
@@ -150,9 +197,16 @@ const wrongAnswers = document.querySelectorAll('.incorrect');
 for (let wrongAnswer of wrongAnswers) {
  wrongAnswer.classList.add('wrong-answer');
   }
+  /**
+   * correct answer
+   */
+ correctAnswer = document.getElementById("correct");
+ correctAnswer.classList.add("correct-answer");
+ nextButton.classList.remove("hide");
+
 
 /**
-  * correct answers
+  * check answers
   */
 
 function checkAnswer(event) {
@@ -164,7 +218,7 @@ const clickedButton = event.target;
 correctAnswer.classList.add("correct-answer");
 if (clickedButton === correctAnswer) {
   incrementScore();
-else {
+} else {
  this.classList.add("wrong-answer");
   }
  nextButton.classList.remove("hide"); // Displays the next button.
