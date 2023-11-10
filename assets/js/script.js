@@ -223,5 +223,67 @@ if (clickedButton === correctAnswer) {
   }
  nextButton.classList.remove("hide"); // Displays the next button.
     }
+nextButton.addEventListener("click", nextQuestion);
+
+function incrementScore() {
+    score = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++score;
+ }
 }
 
+    /**
+     * Restores original structure and presentation
+     * of the quiz area in preparation for new content.
+     */
+
+    function resetQuizContent() {
+        nextButton.classList.add("hide"); // Hides the next button.
+        answersArea.classList.remove("no-pointer"); // Allows clicks again in answer area.
+        timeLeft = 16; // resets the time amount
+        startTimer(); // resets the interval for the timer
+
+        // Removes previous answer options
+        while (answersArea.firstChild) {
+            answersArea.removeChild(answersArea.firstChild);
+        }
+    }
+
+    /**
+     * Hides the quiz area, displays the div with an id of "quiz-complete"
+     * as well as the main heading and inputs the final score 
+     */
+
+    function finalResult() {
+        const quizComplete = document.getElementById("quiz-complete");
+        const finalScore = document.getElementById("final-score");
+        quizArea.classList.add("hide");
+        heading.classList.remove("hide");
+        quizComplete.classList.remove("hide");
+        finalScore.innerText = score; // inputs the final score
+
+        /*
+        Gets the buttons with a class of "quiz-complete-btn" and
+        adds event listeners to them.
+        */
+        const endOfQuizButtons = document.querySelectorAll(".quiz-complete-btn");
+        endOfQuizButtons.forEach((endOfQuizButton) => {
+            endOfQuizButton.addEventListener("click", function () {
+                resetScore();
+                quizComplete.classList.add("hide");
+                if (this.getAttribute("id") === "retry-button") {
+                    quizDifficultyPrompt();
+                } else if (this.getAttribute("id") === "main-menu-button") {
+                    menu.classList.remove("hide");
+                }
+            });
+        });
+    }
+
+    /**
+     * Resets the score to 0 for a new quiz.
+     */
+
+    function resetScore() {
+        score = document.getElementById("score");
+        score.innerText = 0;
+    }
