@@ -4,32 +4,30 @@ const heading = document.getElementById("heading");
 const menu = document.getElementById("menu");
 const rulesSection = document.getElementById("rules");
 const quizArea = document.getElementById("quiz-area");
-const answersArea = document.getElementById("answer-area");
+const answersArea = document.getElementById('answer-area');
 const timeDisplay = document.getElementById("timer");
 const nextButton = document.getElementById("next-button");
 
-// variables to be defined 
- let shuffledQuestions;
- let currentQuestionIndex;
- let correctAnswers;
- let score;
- let timeLeft;
- let timerInterval;
+// variables to be defined /
+
+let shuffledQuestions;
+let currentQuestionIndex;
+let correctAnswer;
+let score;
+let timeLeft;
+let timerInterval;
 
  /* Waits for DOM to be loaded */
- document.addEventListener("DOMContentLoaded", function()
- {
+ document.addEventListener("DOMContentLoaded", function() {
     const menuButtons = this.querySelectorAll(".menu-btn");
     menuButtons.forEach((menuButton) => {
         menuButton.addEventListener("click", function() {
-            if (this.getAttribute("id") ===  "rules-button") {
+            if (this.getAttribute("id") === "rules-button") {
                 displayRules();
-            } else if (this.getAttribute("id") === "quiz-button"){
-                Questions();
-            }
-        });
+            } ;
+            });
     });
- });
+ 
  /**
   * hides main menu while the rules section is displayed.
   */
@@ -49,7 +47,7 @@ const nextButton = document.getElementById("next-button");
     rulesSection.classList.add("hide");
     heading.classList.remove("hide");
     menu.classList.remove("hide");
- }
+}
 
  /**
   * hide the quiz area,reset the quiz and display menu
@@ -96,18 +94,18 @@ const nextButton = document.getElementById("next-button");
 
     questionContainer.InnerText = question.question;
     // create a button
-    question.answer.forEach(answer => {
+    question.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('btn');
-        if (answer-correct) {
+        if (answer.correct) {
             button.id = "correct";
         } else { 
-            button.classList-add("incorrect");
+            button.classList.add("incorrect");
         } 
         // Add event listnere
         button.addEventListener("click", checkAnswer);
-        answerArea.appendChild(button);
+        answersArea.appendChild(button);
     });
     displayQuestionNumber();
 }
@@ -116,10 +114,10 @@ const nextButton = document.getElementById("next-button");
  * change the question number 
  */
 function displayQuestionNumber() {
-    const QuestionNumber = document.getElementById("question-number");
+    const questionNumber = document.getElementById("question-number");
     QuestionNumber.innerText = currentQuestionIndex + 1;
-
 }
+
 /** 
  * set time interval
  */
@@ -128,7 +126,7 @@ function startTimer() {
 
 }
 
-function timer(){
+function timer() {
     if (timeLeft <= 0){
         timeUp();
     } else {
@@ -157,18 +155,30 @@ function timeUp() {
      * correct answers
      */
 
-    correctAnswer = document.getElementById("correct");
-    correctAnswer.classList.add("correct-answet");
-    nextButton.classList.remove("hide");
-}
+    function checkAnswer(event) {
+        clearInterval(timerInterval); // stops the timer from continuing
+  answersArea.classList.add("no-pointer"); // Prevents clicks after answer is chosen.
+correctAnswer = document.getElementById("correct");
+
+        const clickedButton = event.target;
+        correctAnswer.classList.add("correct-answer");
+        if (clickedButton === correctAnswer) {
+            incrementScore();
+        } else {
+            this.classList.add("wrong-answer");
+        }
+        nextButton.classList.remove("hide"); // Displays the next button.
+    }
+
+
 
 /* listens for a next button */
 nextButton.addEventListener("click", nextQuestion);
 
 
-/* get the current score and incerment by 1 */
+/* get the current score and increment by 1. */
 
-function incermentScore() {
+function incrementScore() {
     score = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++score;
 
@@ -202,11 +212,9 @@ endOfQuizButton.forEach((endOfQuizButton) => {
         quizComplete.classList.add("hide");
         if (this.getAttribute("id") === "retry-button");
     }
-    )}
+    )};
 );
 function resetScore() {
     score = document.getElementById("score");
     score.innerText = 0;
 }
-
-

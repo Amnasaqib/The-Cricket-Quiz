@@ -108,13 +108,13 @@ li {
 
 /* style to hide containers */
 .hide {
-    diplay: none;
+    display: none;
 }
 /* correct and wrong answer buttons*/
 .correct-answer {
     color: black;
     background-color: #62ff00 !important;
-    box-shadow: 0px 0px 15px 15px #0e202b;
+    box-shadow: 0px 0px 15px 5px #0e202b;
 }
 .wrong-answer {
     color: black;
@@ -134,7 +134,7 @@ color: #0e202b;
 footer > p {
     font-size: 1rem;
 }
-/* media quieries */
+/* media queries */
 /* for screens larger than 670px*/
 @media screen and (min-width: 670px) {
     h1 {
@@ -158,19 +158,19 @@ font-size: 1.4rem;
 .btn:hover {
     border-color: #ffffff;
     color: #e0115f;
-    box-shadow: 0px 0px 15px 15px #ffffff;
+    box-shadow: 0px 0px 15px 5px #ffffff;
 }
 
 .close-section:hover {
     background-color: #ffffff;
     border-color: #ffffff;
     color: #e0115f;
-    box-shadow: 0px 0px 15px 15px #ffffff;
+    box-shadow: 0px 0px 15px 5px #ffffff;
 }
 #answer-area > .btn:hover {
     background-color: #ffffff;
     color: #e0115f;
-    box-shadow: 0px 0px 15px 15px #ffffff;
+    box-shadow: 0px 0px 15px 5px #ffffff;
  }
 
 
