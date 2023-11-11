@@ -11,6 +11,8 @@ designed to be fun and simple.
  ## Contents
 
   [User Experience](#user-experience)
+  
+ [The Cricket Quiz](#the-cricket-quiz)
 - [The Cricket Quiz](#the-cricket-quiz)
   - [Contents](#contents)
   - [User Experience](#user-experience)
@@ -21,7 +23,6 @@ designed to be fun and simple.
     - [Color Palette](#color-palette)
   - [Features](#features)
     - [Existing Features](#existing-features)
-      - [Footer](#footer)
   - [Technologies used](#technologies-used)
   - [Testing](#testing)
   - [Additional testing](#additional-testing)
@@ -50,13 +51,13 @@ designed to be fun and simple.
   ## Design Choices
 
   ### Font
-*The fonts used throught the site are "Montserrat" and "sans-serif".
+* The fonts used throught the site are "Montserrat" and "sans-serif".
 
 ### Color Palette
 
 ![Color palette](assets/readme-images/color-palette.screenshot.png)
  
- *The color palette was choosen with the help of [coolers]((<https://coolors.co/>)) and i mixed two different color palettes according to my personal preference.
+ * The color palette was choosen with the help of [coolers]((<https://coolors.co/>)) and i mixed two different color palettes according to my personal preference.
 
  [Back on top](#contents)
 
@@ -69,7 +70,7 @@ designed to be fun and simple.
 * #### Heading 
 
 
-* The heading is featured on the landing page above the main menu.
+  * The heading is featured on the landing page above the main menu.
   * It is styled to be captivating and its contents refer to the purpose of the site.
   * This helps users to understand what the site is about and creates a positive first impression.
 
@@ -79,7 +80,7 @@ designed to be fun and simple.
 
 * #### Main Menu 
 
-* On the landing page is the main menu situated directly under the heading.
+  * On the landing page is the main menu situated directly under the heading.
   * This contains text to entice the user to take part in a quiz as well as buttons to view the quiz rules or initiate a quiz.
 
     ![Screenshot of the main menu](assets/readme-images/menu.screenshot.png)
@@ -120,7 +121,7 @@ designed to be fun and simple.
 
 [Back to top](#contents)
 
-  #### Footer
+* #### Footer
   * The bottom of site tell the name of creator of quiz.
   
   ## Technologies used
@@ -145,13 +146,13 @@ designed to be fun and simple.
 
 ## Testing 
 
-*This site is tested and Validated by:
+* This site is tested and Validated by:
 
 * # W3C HTML Validator 
-* 
+  
   ![Screenshot of HTML validation](assets/readme-images/w3C-HTML-validator.Screenshot.png)
   
-*This site has 0 error.
+  * This site has 0 error.
 
 * # CSS Validator
   
@@ -165,7 +166,7 @@ designed to be fun and simple.
 
 ## Additional testing
 
-* # lighthouse
+* # Lighthouse
 
 ![Screenshot of lighthouse](assets/readme-images/lighthouse.screenshot.png)
 
@@ -181,7 +182,7 @@ designed to be fun and simple.
 ### Deploying the Site
 
 * The site was deployed using GitHub pages through the following steps:
-1. In the "the-everything-quiz" GitHub repository, click on "settings".
+1. In the "The-Cricket-Quiz" GitHub repository, click on "settings".
 2. Scroll down and click on the "pages" tab.
 3. In the dropdown menu for the branch, select "main".
 4. Click on "save".
