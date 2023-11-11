@@ -35,7 +35,7 @@ designed to be fun and simple.
  ## User Experience
 
 ### User Stories
-* As a user i want to:
+As a user i want to:
 
  * test cricket knowledge with a quiz.
  * be able to understand how to start the quiz.
