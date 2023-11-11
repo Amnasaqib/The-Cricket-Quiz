@@ -1,6 +1,6 @@
 # The Cricket Quiz
 
-* The Cricket Quiz is a site that targets people that want to take a quiz of their Cricket knowledge.It is 
+* The Cricket Quiz is a site that targets people that want to take a quiz of their Cricket knowledge. It is 
 
 designed to be fun and simple.
 
@@ -10,9 +10,10 @@ designed to be fun and simple.
 
  ## Contents
 
-  [User Experience](#user-experience)
+ [User Experience](#user-experience)
   
- [The Cricket Quiz](#the-cricket-quiz)
+[The Cricket Quiz](#the-cricket-quiz)
+
 - [The Cricket Quiz](#the-cricket-quiz)
   - [Contents](#contents)
   - [User Experience](#user-experience)
@@ -31,18 +32,17 @@ designed to be fun and simple.
   - [Credits](#credits)
     - [Content](#content)
   - [Acknowledgements](#acknowledgements)
-
  ## User Experience
 
 ### User Stories
 * As a user i want to:
 
-* test cricket knowledge with a quiz.
-* be able to understand how to start the quiz.
-* be able the select the difficulty level of my quiz.
-* know the current score.
-* know whether my answer is correct or incorrect.
-* know my final score.
+ * test cricket knowledge with a quiz.
+ * be able to understand how to start the quiz.
+ * be able the select the difficulty level of my quiz.
+ * know the current score.
+ * know whether my answer is correct or incorrect.
+ * know my final score.
 
   ## Site Structure
 
@@ -57,7 +57,7 @@ designed to be fun and simple.
 
 ![Color palette](assets/readme-images/color-palette.screenshot.png)
  
- * The color palette was choosen with the help of [coolers]((<https://coolors.co/>)) and i mixed two different color palettes according to my personal preference.
+ * The color palette was choosen with the help of [coolers](<https://coolors.co/>) and i mixed two different color palettes according to my personal preference.
 
  [Back on top](#contents)
 
